@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.demo";
+
+service Ranker {
+    rpc rank(RankRequest) returns (RankReply) {}
+}
+
+message RankRequest {
+    string mdd = 1;
+}
+
+message RankReply {
+    string sortedids = 1;
+}
